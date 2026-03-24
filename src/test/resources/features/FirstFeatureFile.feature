@@ -1,27 +1,28 @@
 		Feature: Application Login
-
-		Background:
-		Given setup the entries in database 
-    When launch the browser from config variables
-    And hit the home page url of banking site
 		
-		@RegressionTest @NetBanking
+		Background:
+		Given Background - givenFF1
+		When Background - whenFF1
+		And Background - thenFF1
+		
+		
+		@TestTag
   	Scenario: TC-1: Admin Page default Login
     Given User is on NetBanking landing page
     When User login into application with "Admin" and password "ABC"
     Then Home Page is displayed
     And Cards are displayed
     
-    @TestTag
+    @SmokeTest @RegressionTest
     Scenario: TC-2: User Page default login
 		Given User is on NetBanking landing page
 		When User login into application with "User" and password "ABSS"
 		Then Home Page is displayed 
 		And Cards are displayed
     
-    @SmokeTest @NetBanking
+    @SmokeTest @Mortage
     Scenario Outline: TC-3: User Page default Login
-    Given User is on NetBanking landing page
+    Given User is on Mortage landing page
     When User login into application with "<Username>" and password "<Password>" combination
     Then Home Page is displayed
     And Cards are displayed
@@ -31,7 +32,7 @@
     | DebitUser | 1111 | 
     | 111 | Q11Q | 
     
-     @SmokeTest
+     @SmokeTest 
     Scenario: TC-4: User Page default Sign Up
 		Given User is on Practice landing page
 		When User SignUp into application 

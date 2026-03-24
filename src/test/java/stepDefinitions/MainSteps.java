@@ -22,20 +22,6 @@ public class MainSteps {
     	System.out.println("User is on Practice landing page");
     }
     
-    @Given("setup the entries in database")
-    public void setup_the_entries_in_database() {
-    	System.out.println("*********************************************");
-    	System.out.println("Background Test Step 1: setup the entries in database");
-    }
-    @When("launch the browser from config variables")
-    public void launch_the_browser_from_config_variables() {
-    	System.out.println("Background Test Step 2: launch the browser from config variables");
-    }
-    @When("hit the home page url of banking site")
-    public void hit_the_home_page_url_of_banking_site() {
-    	System.out.println("Background Test Step 3: hit the home page url of banking site");
-    }
-    
     @When("User SignUp into application")
     public void user_sign_up_into_application(List<String> data) {
         System.out.println(data.get(1));
@@ -66,4 +52,33 @@ public class MainSteps {
     public void cards_are_displayed() {
         System.out.println("Cards displayed");
     }
+    
+    @Given("Background - givenFF1")
+    public void background_given_ff1() {
+    	System.out.println("Backgroud Tag - Given - FF1");
+    }
+    
+    @When("Background - whenFF1")
+    public void background_when_ff1() {
+    	System.out.println("Backgroud Tag - When - FF1");
+    }
+    @When("Background - thenFF1")
+    public void background_then_ff1() {
+    	System.out.println("Backgroud Tag - Then - FF1");
+    }
+    
+    
+    @Given("Background - givenFF2")
+    public void background_given_ff2() {
+    	System.out.println("Backgroud Tag - Given - FF2");
+    }
+    @When("Background - whenFF2")
+    public void background_when_ff2() {
+    	System.out.println("Backgroud Tag - When - FF2");
+    }
+    @When("Background - thenFF2")
+    public void background_then_ff2() {
+    	System.out.println("Backgroud Tag - Then - FF2");
+    }
+    
 }

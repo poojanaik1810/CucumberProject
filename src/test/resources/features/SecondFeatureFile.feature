@@ -1,5 +1,10 @@
 		Feature: Application Login
 		
+		Background:
+		Given Background - givenFF2
+		When Background - whenFF2
+		And Background - thenFF2
+		
 		@RegressionTest @NetBanking
   	Scenario: TC-1: Admin Page default Login
     Given User is on NetBanking landing page
@@ -7,16 +12,16 @@
     Then Home Page is displayed
     And Cards are displayed
     
-    @SmokeTest @RegressionTest
+    @TestTag
     Scenario: TC-2: User Page default login
 		Given User is on NetBanking landing page
 		When User login into application with "User" and password "ABSS"
 		Then Home Page is displayed 
 		And Cards are displayed
     
-    @SmokeTest @Mortage
+    @SmokeTest @NetBanking
     Scenario Outline: TC-3: User Page default Login
-    Given User is on Mortage landing page
+    Given User is on NetBanking landing page
     When User login into application with "<Username>" and password "<Password>" combination
     Then Home Page is displayed
     And Cards are displayed
@@ -26,7 +31,7 @@
     | DebitUser | 1111 | 
     | 111 | Q11Q | 
     
-     @SmokeTest 
+     @SmokeTest
     Scenario: TC-4: User Page default Sign Up
 		Given User is on Practice landing page
 		When User SignUp into application 
